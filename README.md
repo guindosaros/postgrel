@@ -22,8 +22,24 @@ Recherche sur postgrel sql
   - DateRangeField
 
 ## Utilisation des Champs Postgresql
-Pour utiliser  'django.contrib.postgres' à votre réglage INSTALLED_APPS.
+Pour utiliser les champs Postgresql'django.contrib.postgres' à votre réglage INSTALLED_APPS.
 ```python
 from django.contrib.postgres.fields import IntegerRangeField, JsonFiedl
+
+```
+
+## Utilisation de Postgresql  la place sqlite
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'mydatabaseuser',
+        'NAME': 'mydatabase',
+        'TEST': {
+            'NAME': 'mytestdatabase',
+        },
+    },
+}
 
 ```
